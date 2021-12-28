@@ -1,0 +1,514 @@
+1) Introduction to ReactJS
+
+	=> what is ReactJS
+
+	=> Advantages of ReactJS
+
+	=> Virtual DOM /  Shadow DOM / Real DOM
+
+	=> Disadvantages of ReactJS
+
+	=> Angular / ReactJS / VueJS / NodeJS
+
+
+2) Installation of ReactJS
+
+
+3) Components in ReactJS
+
+	- Functional Components
+
+	- Class Level Components
+
+
+4) Communication Between Components
+
+	1) props
+
+	2) state
+
+5) Asynchrnous Calls / AJAX Calls
+
+	=> axios   (3rd)
+
+	=> fetch
+
+
+6) Middlewares
+
+	Redux
+
+	Saga
+
+	Thunk
+
+
+
+7) MERN Stack Development
+
+	M - MongoDB
+
+	E - ExpressJS
+
+	R - ReactJS
+
+	N - NodeJS
+
+
+8) Single Page Applications
+
+	Routing
+
+
+
+9) Charts API
+
+	Line Chart
+
+	Pie Chart
+
+	Bar Chart
+
+
+10) Profiler
+
+11) Hooks
+
+	setState()
+
+	useEffect()
+
+	useSelector()
+
+	useDispatch()
+	
+	useContext()
+	----
+	----
+	----
+	----
+
+12) Pure Components
+
+
+13) Project
+
+
+14) Cloud Deployment
+
+	AWS Deployment
+
+	Heroku Deployment
+
+
+15) Forms With Validations
+
+	formik & yup
+
+
+16) Testing
+
+
+17) Debugging
+
+
+18) Web Pack
+
+Introduction to ReactJS
+************************
+
+	- ReactJS is the JavaScript Library.
+
+	- Library containes Predefined Functionalities.
+
+	- As a React Developer, we can use Predefined Functuonalities.
+
+	- To use Predefined functionalities, no need to follow any rules and regulations.
+
+	- ReactJS Released by Facebook.
+
+	- Current Version of ReactJS is 17.X
+
+	- ReactJS, used to develop the Web Applications.
+
+	- We will prepare web applications in 2 ways.
+		
+		1) JSX
+
+		2) TSX
+
+	- JSX Stands for JavaScript and XML 
+
+	- TSX Stands for TypeScript and XML
+
+	- JavaScript is the Object Based Scripting Language.
+
+	- TypeScript is the Object Oriented Programming Language.
+
+	- In General, Browsers wont understand XML.
+
+	- So, we need to Convert XML to Equalent JavaScript.
+
+	- Babel is the tool, used to convert the XML to Equalent JavaScript.
+
+	- "Babel" is the inbuilt tool, Provided by React Library.
+
+	- React applications are Component Based.
+
+	- Because of Components Code Reusability is High in React Applications.
+
+	- Reusable Portion of Complex UI Called as Component.
+
+	- React applications are faster compared to Angular applications because of Virtual DOM Mechanism
+
+	- we will save the JSX files with ".js" or ".jsx" extension.
+
+	- we will save the TSX files with ".ts" or ".tsx" extension.
+
+	- React Software Installation Depending on npm tool.
+
+	- npm stands for node packaging manager
+
+	- npm present in NodeJS
+
+	- Visual Studio Code is Suggestable IDE, to Build React Applications
+
+	- Visual Studio Code also called as VSCode
+
+	- VSCode Given by Microsoft.
+
+	- VSCode IDE is Open Source IDE.
+
+Virtual DOM
+***********
+
+	- React Library follows the Virtual DOM Mechanism.
+
+	- DOM Stands for Document Object Model.
+
+	- Browser Engine will prepare DOM Object.
+
+	- Browser engine will create DOM Object Based on HTML Content.
+
+	- if HTML, Loaded Successfully, Browser Engine will create DOM Object.
+
+	- React Library create the two virtual copies of real dom.
+
+	- if any changes are detected, immidiately Virtal DOM Copy will receive changes and updates 
+	  DOM with DOM Traversing.
+
+	- DOM Traversing is Expensive Process.
+
+	- But DOM Traverssing Happened in Virtual Copy, Not in Real DOM.
+
+	- So, Because of Above Traversing React Applications are Faster Compared to Angular Applications
+	
+	- Virtual Copy will compare it's changes with another Virtual Copy.
+
+	- If Mismatches are Detected, Virtual Copy will update Information to Real DOM with Memory Location.
+
+	- After Receiving Updates, Real DOM, Updates the DOM Based on Latest Information
+
+
+
+
+Installation of ReactJS
+***********************
+
+1) download and install NodeJS
+
+	- NodeJS, containes tools like
+
+		1) npm
+
+		2) node
+
+		3) npx
+
+		----
+		----
+		----
+
+	- npm stans for node packaging manager
+
+	- npm helps to install the "reactjs" and "yarn" tool....
+
+	- node tool helps to execute the "javascript"
+
+	- npx stands for "node packaging runner".
+
+	- npx helps to create the "environment" to create the react projects
+
+website : https://nodejs.org/en/download/
+
+file    : node-v16.13.1-x64.msi
+
+
+2) download yarn packaging manager
+
+	yarn is the tool, used to download the 3rd party libraries
+
+	yarn tool given by facebook
+
+	yarn tool installation is command based installation
+
+	> npm install -g yarn
+
+	npm stands for node packaging manner
+
+	npm present in NodeJS
+
+	"-g" stands for global installation
+
+
+3) install the create-react-app tool
+
+	create-react-app is the tool
+
+	create-react-app tool provided by facebook
+
+	create-react-app tool, used to create the react applications with the help of npx tool
+
+	create-react-app is the command based installation
+
+	> npm install -g create-react-app
+
+
+4) install Visual Studio Code
+
+
+	Visual Studio Code is the IDE, given by microsoft
+
+	VSCode is the user frinendly and open source IDE
+
+
+website : https://code.visualstudio.com/docs/?dv=win
+
+file    : VSCodeUserSetup-x64-1.63.2.exe
+
+
+
+Note : we can create react applications in two ways
+
+	1) JSX
+
+	2) TSX
+
+create the react application by using JSX
+*****************************************
+
+1) create the react application by using following command
+
+	> npx create-react-app first-app-jsx
+
+	where "first-app-jsx" is the name of the react application
+
+
+
+2) switch to react application
+
+	> cd first-app-jsx
+
+
+3) execute the react application
+
+	> yarn start
+
+	Default Port Number of React Application is 3000
+
+
+
+create the react application with tsx approach
+**********************************************
+create the react application with following command
+
+	> npx create-react-app first-app-tsx --template typescript
+
+	--template is the flag
+
+	--template flag used to create the typescript environment
+
+
+switch to the react application
+
+	> cd first-app-tsx
+
+
+execute the react application
+
+	> yarn start
+
+
+Directory Structure of React Application
+****************************************
+1) node_modules
+
+	- node_modules containes libraries
+
+	- these libraries helps to execute the react application
+
+
+2) public/favicon.ico
+
+	- this is the Default logo of react application
+
+
+3) public/index.html
+
+	- react library starts the extension from "index.html" file
+
+	- index.html file containes div with id as root
+
+	- react applications are component based applications.
+
+	- after Development of components, we should register in index.js file
+
+	- index.js file acting as registration file
+
+	- registration file will render component in div whose id as root in index.html file.
+
+
+4) public/logo192.png
+		  logo512.png
+
+	- while executing web application into multiple devices, we need different resilution logos
+
+	- above logos helps to implement the responsive web design applications
+
+5) public/manifest.json
+
+	- used to write the mobile application configurations
+
+6) src
+
+	- we will deploy our components here
+
+
+7) src/App.js
+	   App.css
+	   App.test.js
+
+	when ever we create react application, automatically "App" Component is the Default Component
+
+8) src/index.css
+
+	- here, we can define global styles
+
+	- these styles applicable to entire react application
+
+
+9) src/index.js
+
+	- after creating all components we should register into index.js file
+
+
+10) src/logo.svg
+
+	- svg stands for scalar vector graphics
+
+	- svg images have high resolution
+
+	- logo.svg is the Default svg logo of reactjs
+
+11) src/setUpTests.js
+
+	- this file acting as configuration file to write the unit test cases
+
+
+12) src/package.json
+
+	- this file used to download the 3rd party libraries
+
+
+Components in ReactJS
+*********************
+	- Reusable Portion of Complex UI Called as Component.
+
+	- as a react Developer we can create more than one component
+
+	- these components are reusable
+
+	- as a react Developer we can provide Communication between components
+
+	- we have two types of components
+
+			1) functional level component
+
+			2) class level component
+
+
+functional level components
+***************************
+	- simple javascript function behaves like component
+
+	- we should register our components into index.js file
+
+state
+*****
+	state representing the component present state(data).
+
+	useState() is the "life cycle hook" in "functional" components used to define the "state"
+
+	useState() hook return type is array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
