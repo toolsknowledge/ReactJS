@@ -454,6 +454,79 @@ state
 
 
 
+Forms
+*****
+	- Forms are used to encapsulate the Information
+
+		Ex.
+			First Name
+
+			Last Name
+
+			Email
+
+			Phone Number
+
+			Address
+
+			DOB
+
+			---
+			---
+			---
+
+	Registration Form
+
+	Login Form
+
+	---
+	---
+	---
+
+Form Controls
+*************
+
+	- Text Filed
+
+	- Edit Box Field
+
+	- Radio Buttons
+
+	- Check Box
+
+	- Date Pickers
+
+	- Time Pickers
+
+	- Range
+
+	---
+	---
+	---
+
+
+**************************************
+forms-app
+	    src
+		   App.js
+
+		   Form.js
+**************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
