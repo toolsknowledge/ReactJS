@@ -453,65 +453,59 @@ state
 
 
 
-
 Forms
 *****
-	- Forms are used to encapsulate the Information
+	- Forms are used to encapsulate the user information.
 
-		Ex.
-			First Name
+	Ex.
+		Registration Form
 
-			Last Name
+		Login Form
 
-			Email
+		Enrollment Form
 
-			Phone Number
+		---
+		---
+		---
 
-			Address
+	- we will design the forms with the help of form controls.
 
-			DOB
+	Ex.
+			Input Field
+
+			Text Area
+
+			Radio Buttons
+
+			Check Box
+
+			Select
+
+			Range
 
 			---
 			---
 			---
 
-	Registration Form
+	- we have 3rd party libraries like formik and yup.
 
-	Login Form
+	- above libraries reduces the Complexity while developing the forms.
 
-	---
-	---
-	---
+	- above libraries provides the user frinendly environment while writing the validations.
 
-Form Controls
-*************
-
-	- Text Filed
-
-	- Edit Box Field
-
-	- Radio Buttons
-
-	- Check Box
-
-	- Date Pickers
-
-	- Time Pickers
-
-	- Range
-
-	---
-	---
-	---
+	- we will download above libraries with yarn tool.
 
 
-**************************************
-forms-app
-	    src
-		   App.js
 
-		   Form.js
-**************************************
+
+
+
+
+
+
+
+
+
 
 
 
