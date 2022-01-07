@@ -19,4 +19,30 @@ code {
    font-weight: bold;
 }
 
+.input-class{
+  margin-bottom: 10px;
+  
+}
+
+.my-label{
+  display: block;
+  margin: 10px 5px;
+}
+
+.my-input-field{
+    width: 300px;
+    margin: 10px 0px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.master-form{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+
 

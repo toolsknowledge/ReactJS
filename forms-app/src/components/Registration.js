@@ -1,8 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import HelperController from "./HelperController";
 import { Formik,Form } from "formik";
 import * as Yup from "yup";
+import { contextData } from "../context/context";
 function Registration(){
+
+    const {formData,setFormData} = useContext(contextData);
+
+
+
     const initialValues = {
         "fname":"",
         "lname":"",
@@ -10,14 +16,16 @@ function Registration(){
     };
     const validationSchema = Yup.object({
         "fname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(5,"Minimum 5 Characters Are Required"),
-        "lname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(5,"Minimum 5 Characters Are Required"),
-        "email":Yup.string().required("Can't Left Empty !").email("Enter Valid Email").matches(/^w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,"invalid email format")
+        "lname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(2,"Minimum 2 Characters Are Required"),
+        "email":Yup.string().required("Can't Left Empty !").email("Enter Valid Email").matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"invalid email format")
     })
     const onSubmit = values=>{
-        console.log(values);
+        //console.log(values);
+        setFormData({values})
     }
 
     return(
+        <div className="master-form">
         <Formik initialValues={initialValues}
                 validationSchema={validationSchema}
                 onSubmit={onSubmit}>
@@ -40,12 +48,13 @@ function Registration(){
                                               name="email"
                                               label="Email"></HelperController>
 
-                            <button type="submit" disabled={!formik.isValid}>Next</button>
+                            <button type="submit" disabled={!formik.isValid} className="btn btn-primary btn-sm">Next</button>
                         </Form>
                     )
                 }
             }
         </Formik>
+        </div>
     )
 }
 export default Registration;
