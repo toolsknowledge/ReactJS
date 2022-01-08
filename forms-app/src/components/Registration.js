@@ -1,18 +1,15 @@
 import React,{useContext} from "react";
 import HelperController from "./HelperController";
-import { Formik,Form } from "formik";
+import { Formik,Form,FieldArray,Field } from "formik";
 import * as Yup from "yup";
 import { contextData } from "../context/context";
 function Registration(){
-
     const {formData,setFormData} = useContext(contextData);
-
-
-
     const initialValues = {
         "fname":"",
         "lname":"",
-        "email":""
+        "email":"",
+        "phoneNumbers":[""]
     };
     const validationSchema = Yup.object({
         "fname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(5,"Minimum 5 Characters Are Required"),
@@ -48,6 +45,38 @@ function Registration(){
                                               name="email"
                                               label="Email"></HelperController>
 
+                            <br></br>
+
+                            <label htmlFor="Phone Numbers">Phone Numbers</label>
+                            <FieldArray name="phoneNumbers">
+                                {
+                                    (obj)=>{
+                                        const { form,push,remove } = obj;
+                                        const { values } = form;
+                                        const { phoneNumbers } = values;
+                                        console.log( phoneNumbers );
+                                        return <div>
+                                            {
+                                                phoneNumbers.map((element,index)=>(
+                                                    <div key={index}>
+                                                        <Field name={`phoneNumbers[${index}]`} type="text" className="array-styles"></Field>
+                                                        {
+                                                            index>0?(<button onClick={()=>remove(index)} 
+                                                                     className="btn btn-danger btn-sm">-</button>):null
+                                                        }
+                                                        {
+                                                            index>0?null:<button onClick={()=>push("")} className="btn btn-success btn-sm">+</button>
+                                                        }
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    }
+                                }
+                            </FieldArray>
+                           
+                          
+                           
                             <button type="submit" disabled={!formik.isValid} className="btn btn-primary btn-sm">Next</button>
                         </Form>
                     )

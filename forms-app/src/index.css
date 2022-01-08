@@ -45,4 +45,13 @@ code {
 }
 
 
+.array-styles{
+  width: 300px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+
 
