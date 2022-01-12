@@ -4,17 +4,32 @@ import { Formik,Form,FieldArray,Field } from "formik";
 import * as Yup from "yup";
 import { contextData } from "../context/context";
 function Registration(){
+
+    const country = [
+        {key:"--- select country ---",value:""},
+        {key:"india",value:"India"},
+        {key:"usa",value:"USA"},
+        {key:"uk",value:"London"},
+        {key:"japan",value:"Japan"}
+    ]
+
+
+
     const {formData,setFormData} = useContext(contextData);
     const initialValues = {
         "fname":"",
         "lname":"",
         "email":"",
-        "phoneNumbers":[""]
+        "phoneNumbers":[""],
+        "address":"",
+        "country":""
     };
     const validationSchema = Yup.object({
         "fname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(5,"Minimum 5 Characters Are Required"),
         "lname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(2,"Minimum 2 Characters Are Required"),
-        "email":Yup.string().required("Can't Left Empty !").email("Enter Valid Email").matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"invalid email format")
+        "email":Yup.string().required("Can't Left Empty !").email("Enter Valid Email").matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"invalid email format"),
+        "address":Yup.string().required("Required !"),
+        "country":Yup.string().required("Required !")
     })
     const onSubmit = values=>{
         //console.log(values);
@@ -54,7 +69,6 @@ function Registration(){
                                         const { form,push,remove } = obj;
                                         const { values } = form;
                                         const { phoneNumbers } = values;
-                                        console.log( phoneNumbers );
                                         return <div>
                                             {
                                                 phoneNumbers.map((element,index)=>(
@@ -75,9 +89,24 @@ function Registration(){
                                 }
                             </FieldArray>
                            
-                          
-                           
+                            
+
+                            <HelperController control="textarea"
+                                              name="address"
+                                              label="Address"></HelperController>
+                            
+
+                            <HelperController control="select"
+                                              name="country"
+                                              label="country"
+                                              options={country}></HelperController>
+
+
+                            <br></br>
+
                             <button type="submit" disabled={!formik.isValid} className="btn btn-primary btn-sm">Next</button>
+                                
+                        
                         </Form>
                     )
                 }
