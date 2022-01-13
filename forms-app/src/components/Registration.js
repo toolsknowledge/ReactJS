@@ -13,6 +13,14 @@ function Registration(){
         {key:"japan",value:"Japan"}
     ]
 
+    const gender_options = [
+        {"key":"male","value":"male"},
+        {"key":"female","value":"female"}
+    ];
+
+    
+
+
 
 
     const {formData,setFormData} = useContext(contextData);
@@ -22,14 +30,17 @@ function Registration(){
         "email":"",
         "phoneNumbers":[""],
         "address":"",
-        "country":""
+        "country":"",
+        "gender":""
+
     };
     const validationSchema = Yup.object({
         "fname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(5,"Minimum 5 Characters Are Required"),
         "lname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(2,"Minimum 2 Characters Are Required"),
         "email":Yup.string().required("Can't Left Empty !").email("Enter Valid Email").matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"invalid email format"),
         "address":Yup.string().required("Required !"),
-        "country":Yup.string().required("Required !")
+        "country":Yup.string().required("Required !"),
+        "gender":Yup.string().required("Required !")
     })
     const onSubmit = values=>{
         //console.log(values);
@@ -100,6 +111,11 @@ function Registration(){
                                               name="country"
                                               label="country"
                                               options={country}></HelperController>
+
+                            <HelperController control="radio"
+                                              name="gender"
+                                              label="gender"
+                                              options={gender_options}></HelperController>
 
 
                             <br></br>
