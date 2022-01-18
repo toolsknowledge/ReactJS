@@ -4,6 +4,7 @@ import Select from "./Select";
 import TextArea from "./TextArea";
 import RadioButtons from "./RadioButtons";
 import CheckBoxGroup from "./CheckBoxGroup";
+import DatePicker from "./DatePicker";
 
 function HelperController(props){
     const {control,...rest} = props;
@@ -18,6 +19,9 @@ function HelperController(props){
                 return <RadioButtons {...rest}></RadioButtons>
         case "checkbox":
                 return <CheckBoxGroup {...rest}></CheckBoxGroup>
+
+        case "date":
+                return <DatePicker {...rest}></DatePicker>
        default:
                 return null;
     }

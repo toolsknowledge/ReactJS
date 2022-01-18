@@ -10,7 +10,7 @@ function RadioButtons(props){
                 {
                     (obj)=>{
                         const { field } = obj;
-                        //console.log(field);
+                        //console.log(field);cls
                         return options.map(option=>{
                             
                             return <React.Fragment key={option.key}>

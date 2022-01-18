@@ -18,7 +18,12 @@ function Registration(){
         {"key":"female","value":"female"}
     ];
 
-    
+    const checkbox_options = [
+        {"key":"angular","value":"angular"},
+        {"key":"reactjs","value":"reactjs"},
+        {"key":"vuejs","value":"vuejs"},
+        {"key":"nodejs","value":"nodejs"}
+    ];    
 
 
 
@@ -31,8 +36,9 @@ function Registration(){
         "phoneNumbers":[""],
         "address":"",
         "country":"",
-        "gender":""
-
+        "gender":"",
+        "skills":[],
+        "courseDate":null
     };
     const validationSchema = Yup.object({
         "fname":Yup.string().required("Can't Left Empty !").max(8,"Reached Max Limit !").min(5,"Minimum 5 Characters Are Required"),
@@ -40,7 +46,8 @@ function Registration(){
         "email":Yup.string().required("Can't Left Empty !").email("Enter Valid Email").matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"invalid email format"),
         "address":Yup.string().required("Required !"),
         "country":Yup.string().required("Required !"),
-        "gender":Yup.string().required("Required !")
+        "gender":Yup.string().required("Required !"),
+        "courseDate": Yup.date().required('Required').nullable()
     })
     const onSubmit = values=>{
         //console.log(values);
@@ -56,10 +63,10 @@ function Registration(){
                 formik=>{
                     return(
                         <Form>
-                            <HelperController control="input"
+                             <HelperController control="input"
                                               type="text"
                                               name="fname"
-                                              label="First Name"></HelperController>
+                                              label="First Name"></HelperController> 
 
                             <HelperController control="input"
                                               type="text"
@@ -116,6 +123,19 @@ function Registration(){
                                               name="gender"
                                               label="gender"
                                               options={gender_options}></HelperController>
+
+                            <HelperController control="checkbox"
+                                              name="skills"
+                                              label="select subjects"
+                                              options={checkbox_options}></HelperController>
+
+                                
+            <HelperController
+              control='date'
+              label='Course date'
+              name='courseDate'
+            />
+
 
 
                             <br></br>
