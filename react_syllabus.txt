@@ -552,6 +552,64 @@ Forms
 
 
 
+Multi Step Form with user inputs
+********************************
+
+1) create the react project
+
+	> npx create-react-app final-app
+
+2) switch to react application
+
+	> cd final-app
+
+
+3) add the material ui library
+
+	npm install @mui/material @emotion/react @emotion/styled
+
+
+4) create the components
+
+		1) FirstStep.js
+
+		2) SecondStep.js
+
+		3) ThirdStep.js
+
+
+5) create the horizontal stepper
+
+		=> Stepper
+
+			1) activeStep
+
+			2) alternateLabel
+
+		=> Step
+
+		=> StepLabel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
