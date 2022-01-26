@@ -613,6 +613,205 @@ Multi Step Form with user inputs
 
 
 
+Rest API Calls
+**************
+
+1) GET
+
+
+2) POST
+
+
+3) PUT
+
+
+4) DELETE
+
+
+
+MongoDB
+*******
+	- MongoDB is "NoSQL" DataBase.
+
+	- MongoDB Supports the "JSON".
+
+	- MongoDB DataBase is "light" weight DataBase.
+
+	- By Default MongoDB DataBase Running on Port Number  27017
+
+	- MongoDB DataBase Supports the "mongodb" protocol
+
+	- MongoDB DataBase provides the cloud environment in the form of a "MongoDB Atlas"
+
+
+SQL														NoSQL
+*******************************************************************************************
+Oracle,												MongoDB,
+MySQL,												CassandraDB,
+SQLServer											RabbiMQ
+
+
+DataBases											DataBases
+
+
+tables												collections
+
+primary key											_id
+
+records												documents
+
+*****************************************************************************************************
+
+NodeJS
+******
+	- NodeJS is backend technology
+
+	- By using NodeJS, we can develop "servers"
+
+	- we will develop "NodeJS" applications with the help of "JavaScript".
+
+	- NodeJS, Supports the Modules/libraries
+
+	- we will download Modules/libraries with the help of yarn tool
+
+Modules
+*******
+1) express
+		- used to develop the rest api's
+		Ex.
+			GET
+			POST
+			PUT
+			DELETE
+
+2) mongodb
+	- used to connect to "mongodb" database
+
+
+3) cors	
+	- used to enable the Communication between ports
+
+
+4) jwt-simple
+	- used to generate the tokens
+
+	- these tokens are used to maintain the token based authentication system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step1.
+	create the account with MongoDB Atlas
+
+	MongoDB Atlas provides the cloud environment
+
+	URL : https://www.mongodb.com/cloud/atlas/register
+
+
+
+Step 2.
+	create the DataBase
+
+		DataBase Name : reactjs
+
+		collection Name : products
+
+		user name : admin
+
+		password : admin
+
+		connection url : mongodb+srv://admin:admin@06-ng-11am.bskgx.mongodb.net/reactjs?retryWrites=true&w=majority
+
+
+Step 3.
+	create the backend Directory
+
+Step 4.
+	switch to backend Directory
+
+Step 5.
+	download the libraries
+
+	> yarn add express mongodb cors
+
+Step 6.
+	create the node server
+
+	server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
