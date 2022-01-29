@@ -78,8 +78,8 @@ function SecondStep(){
                                               label="address"></HelperController>
                             
                             
-                            {/* <button onClick={()=>setCurrentStep(3)}>Next</button> */}
-                            <button type="submit">Next</button>
+                            <button onClick={()=>setCurrentStep(3)}>Next</button>
+                            {/* <button type="submit">Next</button> */}
                             <button onClick={()=>setCurrentStep(1)}>Previous</button>                  
                         </Form>
                         )

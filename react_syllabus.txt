@@ -754,6 +754,196 @@ Step 6.
 
 
 
+Store the form data in mongodb database with the help of NodeJS
+***************************************************************
+1) create the table in mongodb database
+
+	URL : mongodb+srv://admin:admin@03reactjs9am.7kkvt.mongodb.net/forms-database?retryWrites=true&w=majority
+
+	database name : forms-database
+
+	collection name : login_details
+
+
+2) create the backend directory
+
+	backend
+
+3) switch to backend directory
+
+	> cd backend
+
+4) download the node modules
+
+	=> express
+
+	=> mongodb
+
+	=> cors
+
+	- express module used to develop the rest api's
+
+	Ex.
+			GET
+			POST
+			PUT
+			DELETE
+			---
+			---
+			---
+
+	- "mongodb module" used to connect to "mongodb" database
+
+	- "cors" module used to enable the "cors" policy
+
+	- we will download above modules with the help of "yarn" tool
+
+	- above modules downloads to "node_modules" folder in current path.
+
+
+	> yarn add express cors mongodb
+
+
+
+5) develop the rest api
+
+	server.js
+
+
+6) start the node server
+
+	> node server
+
+7) test the rest api call with Postman
+
+	> http://localhost:8080/register
+
+
+
+Login Request
+*************
+	we will login with the help of email and password
+
+	if login success, we will generate the token
+
+	we will use these tokens for authentication purpose
+
+	we will generate tokens by using jwt-simple module
+
+	> yarn add jwt-simple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
