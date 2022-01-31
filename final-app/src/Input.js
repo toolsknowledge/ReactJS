@@ -6,7 +6,7 @@ function Input(props){
     return(
         <React.Fragment>
             <label htmlFor={name}>{label}</label>
-            <Field id={name} name={name} {...rest}></Field>
+            <Field id={name} name={name} {...rest} className="MyField"></Field>
             <ErrorMessage component={TextError} name={name}></ErrorMessage>
         </React.Fragment>
     )

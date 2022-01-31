@@ -32,7 +32,6 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-
         <Stepper activeStep={currentStep-1} alternativeLabel style={{width:'60%'}}>
            <Step>
               <StepLabel></StepLabel>

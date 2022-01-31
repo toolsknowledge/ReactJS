@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { globalData } from "./global";
 import App from "./App";
 
@@ -10,8 +10,12 @@ function Master(){
 
 
     function formData(){
-        console.log("final data");
+        console.log(finalData);
     }
+
+    useEffect(()=>{
+        console.log(finalData);
+    },[]);
 
     return(
         <React.Fragment>

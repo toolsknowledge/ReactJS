@@ -3,10 +3,12 @@ import { globalData } from "./global";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import HelperController from "./HelperController";
+import axios from "axios";
 
 function ThirdStep(){
 
-    const {setCurrentStep,formData} = useContext(globalData);
+    
+    const { setCurrentStep,setFinalData,finalData,formData } = useContext(globalData);
 
     const initialValues = {
         "dob":null
@@ -17,7 +19,15 @@ function ThirdStep(){
     }); 
 
     const onSubmit = values=>{
-        console.log(values);
+        console.log("Hello");
+        
+        setFinalData({...finalData,values});
+        console.log(finalData);
+        axios.post("http://localhost:8080/register",finalData).then((posRes)=>{
+            console.log(posRes);
+        },(errRes)=>{
+            console.log(errRes);
+        })
     }
 
 
@@ -34,6 +44,9 @@ function ThirdStep(){
                                 <HelperController control="date"
                                                   name="dob"
                                                   label="Date Of Birth"></HelperController>
+
+                                <button onClick={()=>setCurrentStep(2)}>Previous</button>
+                                <button type="submit">Submit</button>
                             </Form>
                         )
                     }
@@ -42,12 +55,6 @@ function ThirdStep(){
             </Formik>
 
 
-            <br></br><br></br>
-            <br></br><br></br>
-            <br></br><br></br>
-            <br></br><br></br>
-            <button onClick={()=>setCurrentStep(2)}>Previous</button>
-            <button onClick={formData}>Submit</button>
         </React.Fragment>
     )
 }

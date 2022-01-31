@@ -19,11 +19,11 @@ function FirstStep(){
         "fname" : Yup.string().required("Required !").min(3,"Minimum 3 Characters are Required").max(6,"Maximum 6 Characters Are Allowed"),
         "lname" : Yup.string().required("Required !").min(3,"Minimum 3 Characters are Required").max(6,"maximum 6 characters are allowed"),
         "email" : Yup.string().required("Required !").email("Please enter valid email").matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"invalid email format")
+       
     })
 
     const onSubmit = values=>{
         setFinalData({...finalData,values})
-        console.log(finalData);
         setCurrentStep(2);
     }
 
@@ -45,8 +45,9 @@ function FirstStep(){
                                             {
                                                 (my_obj)=>{
                                                     const {form,push,remove} = my_obj;
-                                                    const { values } = form;
+                                                    const { values,errors } = form;
                                                     const { phoneNumbers } = values;
+                                                    
                                                     return <div>
                                                         {
                                                             phoneNumbers.map((element,index)=>(
@@ -72,7 +73,7 @@ function FirstStep(){
                                             onClick={()=>setCurrentStep(2)}
                                         */}
                                         <br></br><br></br>
-                                        <button  disabled={!formik.isValid} type="submit">Next</button>
+                                        <button  disabled={!formik.isValid} type="submit" className="my-button">Next</button>
                                   </Form>
                               )
                           }

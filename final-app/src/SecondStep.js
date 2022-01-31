@@ -7,7 +7,9 @@ import HelperController from "./HelperController";
 
 function SecondStep(){
 
-    const {setCurrentStep} = useContext(globalData);
+    
+    const { setCurrentStep,setFinalData,finalData } = useContext(globalData);
+
 
     const gender_options = [{key:"male",value:"Male"},
                             {key:"female",value:"Female"}];
@@ -44,7 +46,8 @@ function SecondStep(){
     })
 
     const onSubmit = values=>{
-        console.log(values);
+        setFinalData({...finalData,values});
+        setCurrentStep(3);
     }
 
 
@@ -78,8 +81,8 @@ function SecondStep(){
                                               label="address"></HelperController>
                             
                             
-                            <button onClick={()=>setCurrentStep(3)}>Next</button>
-                            {/* <button type="submit">Next</button> */}
+                            {/* <button onClick={()=>setCurrentStep(3)}>Next</button> */}
+                            <button type="submit">Next</button> 
                             <button onClick={()=>setCurrentStep(1)}>Previous</button>                  
                         </Form>
                         )
