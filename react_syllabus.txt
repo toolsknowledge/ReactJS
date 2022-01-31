@@ -841,6 +841,40 @@ Login Request
 
 
 
+single page Applications
+************************
+
+	- loading one component to another component without refreshing the whole webpage called as single page application
+
+	- navigation between components in single page applications called as Routing.
+
+	- react-router-dom package used to implement the Routing.
+
+Ex1.
+	create the target components
+
+	1) Pageone
+
+	2) Pagetwo
+
+	3) Pagethree
+
+	create the Master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
