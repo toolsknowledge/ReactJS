@@ -841,16 +841,46 @@ Login Request
 
 
 
-single page Applications
+
+Single Page Applications
 ************************
 
 	- loading one component to another component without refreshing the whole webpage called as single page application
 
-	- navigation between components in single page applications called as Routing.
+	- navigation between the components called as Routing
 
-	- react-router-dom package used to implement the Routing.
+	- react-router-dom is the package used to implement the routing in single page application
 
-Ex1.
+	- current Version of react-router-dom package is V6.
+
+	- we will download react-router-dom package with the help of yarn tool
+
+	> yarn add react-router-dom
+
+
+steps to implement the single page application
+**********************************************
+
+step 1.
+	create the react application
+
+	> npx create-react-app spa-demo-v6
+
+
+step 2.
+	switch to react application
+
+	> cd spa-demo-v6
+
+
+step 3.
+	download the react-router-dom package
+
+
+	> yarn add react-router-dom
+
+
+step 4.
 	create the target components
 
 	1) Pageone
@@ -859,7 +889,70 @@ Ex1.
 
 	3) Pagethree
 
-	create the Master
+	4) NoPage
+
+	5) Layout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
