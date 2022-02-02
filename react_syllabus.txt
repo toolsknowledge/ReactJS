@@ -861,37 +861,66 @@ Single Page Applications
 steps to implement the single page application
 **********************************************
 
-step 1.
+Step 1.
 	create the react application
 
 	> npx create-react-app spa-demo-v6
 
 
-step 2.
+Step 2.
 	switch to react application
 
 	> cd spa-demo-v6
 
-
-step 3.
+Step 3.
 	download the react-router-dom package
-
 
 	> yarn add react-router-dom
 
 
-step 4.
+Step 4.
+	create the Layout Component
+
+Step 5.
 	create the target components
 
-	1) Pageone
+		Pageone
 
-	2) Pagetwo
+		Pagetwo
 
-	3) Pagethree
+		Pagethree
 
-	4) NoPage
+Step 6.
+	create the master component
 
-	5) Layout
+Step 7.
+	execute the Master Component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
