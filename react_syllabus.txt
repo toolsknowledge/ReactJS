@@ -898,6 +898,270 @@ Step 7.
 
 
 
+Project
+*******
+	- Single Page Applications
+
+	- jwt-simple module     (token based authentication)
+
+	- MERN Stack Development
+
+		M - MongoDB
+
+		E - ExpressJS
+
+		R - ReactJS
+
+		N - NodeJS
+
+Day-1
+*****
+	1) create the login_details collection
+
+	database name : miniproject
+
+	collection name : login_details
+
+	user name : admin
+
+	password   : admin
+
+	connection url : mongodb+srv://admin:admin@03reactjs9am.7kkvt.mongodb.net/miniproject?retryWrites=true&w=majority
+
+
+	2) implement the backend
+
+		=> create the directory
+
+			miniproject_server
+
+		=> switch to miniproject_server
+
+			> cd miniproject_server
+
+		=> download the node modules
+
+				1) express
+
+				2) mongodb
+
+				3) cors
+
+				4) jwt-simple
+
+			- express module used to develop the rest services
+
+			- mongodb module used to connect to mongodb database
+
+			- cors module used to enable the ports communication
+
+			- jwt-simple module used to generate the token
+
+			> yarn add exress mongodb cors jwt-simple 
+
+	=> develop the rest api
+
+			server.js
+
+
+	=> start the node server
+
+		> node server
+
+	=> test the rest api by using Postman
+
+		> http://localhost:8080/login (POST)
+
+
+
+	3) create the react application
+
+		> npx create-react-app miniproject-app
+
+	4) switch to react application
+
+		> cd miniproject-app
+
+
+	5) download axios module, react-router-dom
+
+			axios module used to consume the rest apis
+
+			react-router-dom module used to implement the routing
+
+
+		> yarn add axios react-router-dom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
