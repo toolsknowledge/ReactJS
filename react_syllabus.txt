@@ -994,6 +994,30 @@ Day-1
 
 
 
+Day-2
+*****
+	create single page application
+
+
+	1) Layout.js
+	
+	2) Login.js
+	
+	3) Master.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
