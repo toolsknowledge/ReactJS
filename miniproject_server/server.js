@@ -53,7 +53,53 @@ app.post("/login",(req,res)=>{
 
 
 
+//compare the reactjs token with nodejs token
+const middleware = (req,res,next)=>{
+    let allHeaders = req.headers;
+    let react_token = allHeaders.token;
+    if(react_token === server_token){
+        next();
+    }else{
+        res.send({"message":"unauthorized user !"});
+    }
+};
+
+
+
+//create the get request
+app.get("/products",[middleware],(req,res)=>{
+    ashokIT.connect("mongodb+srv://admin:admin@03reactjs9am.7kkvt.mongodb.net/miniproject?retryWrites=true&w=majority",(err,connection)=>{
+        if(err) throw err;
+        else{
+            let db = connection.db("miniproject");
+            db.collection("products").find().toArray((err,array)=>{
+                if(err) throw err;
+                else{
+                    res.send(array);
+                }
+            })
+        }
+    });
+});
+
+
+
 //assign the port number
 app.listen(8080,()=>{
     console.log("server listening the port no.8080");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

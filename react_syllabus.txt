@@ -1007,6 +1007,143 @@ Day-2
 
 
 
+Day-3
+*****
+	upload images to aws server s3 bucket
+
+	bucket details : miniproject-rjs
+
+	images : p1.jpg
+	         p2.jpg
+			 --
+			 --
+			 --
+			 p6.jpg
+
+	bucket policy
+	*************
+	{
+		"Version": "2012-10-17",
+		"Statement": [
+			{
+				"Sid": "PublicRead",
+				"Effect": "Allow",
+				"Principal": "*",
+				"Action": [
+					"s3:GetObject",
+					"s3:GetObjectVersion"
+				],
+				"Resource": [
+					"arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"
+				]
+			}
+		]
+	}
+
+	cloud images : https://miniproject-rjs.s3.us-east-2.amazonaws.com/p1.jpg
+
+					https://miniproject-rjs.s3.us-east-2.amazonaws.com/p2.jpg
+
+					https://miniproject-rjs.s3.us-east-2.amazonaws.com/p3.jpg
+
+					https://miniproject-rjs.s3.us-east-2.amazonaws.com/p4.jpg
+
+					https://miniproject-rjs.s3.us-east-2.amazonaws.com/p5.jpg
+
+					https://miniproject-rjs.s3.us-east-2.amazonaws.com/p6.jpg
+
+
+	create the collection in mongodb database
+	******************************************
+
+	database name : miniproject
+
+	collection name : products
+
+	user name : admin
+
+	password : admin
+
+	connection url : mongodb+srv://admin:admin@03reactjs9am.7kkvt.mongodb.net/miniproject?retryWrites=true&w=majority
+
+
+	implement the backend  (nodejs)
+	*******************************
+
+	server.js
+
+	start the node server
+	*********************
+	node server
+
+	test the rest api by using Postman
+	**********************************
+
+	http://localhost:8080/login     (POST)
+
+	http://localhost:8080/products    (GET)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
