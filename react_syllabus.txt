@@ -1081,7 +1081,51 @@ Day-3
 
 	http://localhost:8080/login     (POST)
 
-	http://localhost:8080/products    (GET)
+	http://localhost:8080/products    (GET)    (add the token as header)
+
+
+
+Day-4
+*****
+	create the Products Component
+
+		- read the token from "localStorage" and send token to "backend" with the help of "headers".
+
+
+	implement the Dashboard Component
+
+		Dashboard Component is Single Page Application
+
+
+	**********************************************
+	DashboardLayout.js
+
+	Dashboard.js
+	*********************************************
+
+	navigate from Login Component to Dashboard Component
+	****************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

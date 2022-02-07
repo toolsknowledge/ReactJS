@@ -1,10 +1,13 @@
 import React,{useRef} from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login(){
 
     const user_email = useRef(null);
     const user_password = useRef(null);
+
+    const navigate = useNavigate();
 
 
     const login = ()=>{
@@ -12,6 +15,7 @@ function Login(){
             const {data} = posRes;
             if(data.login == "success"){
                 window.localStorage.setItem("login_status",JSON.stringify(data));
+                navigate("/dashboard");
             }else{
                 alert("Login Fail");
             }
