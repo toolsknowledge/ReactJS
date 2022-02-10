@@ -1,16 +1,28 @@
 import React from "react";
-import DashboardLayout from "../pages/DashboardLayout";
 import Products from "./Products";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Employees from "./Employees";
+import Lists from "./Lists";
+import { Routes,Route,Link } from "react-router-dom";
+
 function Dashboard(){
+    
+    const logout = ()=>{
+        console.log("Logout");
+    }
+    
     return(
-        <BrowserRouter>
+        
             <Routes>
-                <Route path="/" element={<DashboardLayout/>}>
-                    <Route index element={<Products />}></Route>
-                </Route>
+                <Link to="products" style={{marginRight:100}}>Products</Link>
+                <Link to="employees" style={{marginRight:100}}>Employees</Link>
+                <Link to="lists" style={{marginRight:100}}>Lists</Link>
+                <button onClick={logout}>Logout</button>
+
+                <Route path="products" element={<Products></Products>}></Route>
+                <Route path="employees" element={<Employees></Employees>}></Route>
+                <Route path="lists" element={<Lists></Lists>}></Route>
             </Routes>
-        </BrowserRouter>
+        
     )
 }
 export default Dashboard;
