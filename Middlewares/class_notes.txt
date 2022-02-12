@@ -1,0 +1,79 @@
+Middlewares
+***********
+
+    - maintaing common space for all components to store the data and access the data called as Middlewares
+
+    - Middlewares reduces the complexity in communication between components
+
+    - Middlewares reduces the burden on server
+
+    - we have following Middlewares
+
+            1) Redux
+
+            2) Thunk
+
+            3) Saga
+
+
+    Terminology
+    ***********
+        1) store
+
+        2) reducer
+
+        3) initialState
+
+        4) state
+
+        5) dispatch
+
+                => Action
+
+                => Payload
+
+        6) Subscribe
+
+                => state
+
+
+Ex_1:
+    create the directory
+
+    Ex.
+        Basic_Redux_Ex
+
+
+    switch to directory
+
+    > cd Basic_Redux_Ex
+
+
+    download the redux library
+
+    > yarn add redux
+
+    redux library downloads to "node_modules" folder
+
+    create the redux application
+
+    Bank.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

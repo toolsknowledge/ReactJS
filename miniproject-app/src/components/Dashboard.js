@@ -13,12 +13,12 @@ function Dashboard(){
     return(
         
             <Routes>
-                <Link to="products" style={{marginRight:100}}>Products</Link>
+                <Link to="/" style={{marginRight:100}}>Products</Link>
                 <Link to="employees" style={{marginRight:100}}>Employees</Link>
                 <Link to="lists" style={{marginRight:100}}>Lists</Link>
                 <button onClick={logout}>Logout</button>
 
-                <Route path="products" element={<Products></Products>}></Route>
+                <Route path="/" element={<Products></Products>}></Route>
                 <Route path="employees" element={<Employees></Employees>}></Route>
                 <Route path="lists" element={<Lists></Lists>}></Route>
             </Routes>
@@ -26,3 +26,5 @@ function Dashboard(){
     )
 }
 export default Dashboard;
+
+
